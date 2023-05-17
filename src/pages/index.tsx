@@ -1,11 +1,23 @@
+import Chart from "../components/Chart";
 import Card from "../components/Card";
+import { Container, RightSide } from "./style";
+
+const cardData = [
+  { title: "Saldo a pagar", value: "R$ 120,55" },
+  { title: "Saldo a receber", value: "R$ 120,55" },
+  { title: "Saldo total", value: "R$ 120,55" },
+];
 
 const Home = () => (
-  <>
-    <Card title="Saldo a pagar" value="R$ 10.000,00" />
-    <button>Teste</button>
-    <input type="text" name="" id="" placeholder="Saldo a pagar" />
-  </>
+  <Container>
+    <Chart></Chart>
+    <RightSide>
+      {cardData.map((card) => (
+        <Card key={card.title} title={card.title} value={card.value} />
+      ))}
+      <button>Download</button>
+    </RightSide>
+  </Container>
 );
 
 export default Home;
