@@ -1,6 +1,6 @@
 import Chart from "../components/Chart";
 import Card from "../components/Card";
-import { Container, RightSide } from "./style";
+import { Container, RightSide } from "./styles";
 
 const cardData = [
   { title: "Saldo a pagar", value: "R$ 120,55" },

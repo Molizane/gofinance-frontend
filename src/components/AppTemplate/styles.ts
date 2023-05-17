@@ -20,6 +20,6 @@ export const Content = styled.div`
   justify-content: center;
   p {
     color: ${(props) => props.theme.colors.white};
-    font-size: 28px;
+    font-size: 18px;
   }
 `;

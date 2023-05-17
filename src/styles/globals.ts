@@ -38,10 +38,22 @@ input{
   padding-left: 16px;
   padding-bottom: 8px;
   padding-top: 8px;
-  
+  font-size: 12px;
+
+  &:focus{
+    outline: none;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus{
+  background-color: ${(props) => props.theme.colors.black3};
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: ${(props) => props.theme.colors.white};
   ::-webkit-input-placeholder{
     color: #4b4747;
-    font-size: 12px;
+    font-size:12px;
     font-weight: 500;
   }
 }
