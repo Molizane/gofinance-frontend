@@ -1,6 +1,5 @@
 import Image from "next/image";
-import { Container } from "./styles";
-import { Content } from "./styles";
+import { Container, Content } from "../../styles/signin/signin.styles";
 import logo from "../../assets/logo.png";
 import Link from "next/link";
 

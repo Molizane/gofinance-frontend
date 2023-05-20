@@ -1,9 +1,7 @@
-import Chart from "../components/Chart";
-// import Card from "../components/Card";
-import { Container, RightSide } from "./styles";
-import DateInput from "../components/DateInput";
-import SearchBar from "../components/SearchBar";
+import { Container, RightSide } from "../styles/home/home.styles";
 import TableNavBar from "../components/TableNavBar";
+import Chart from "../components/Chart";
+import Card from "../components/Card";
 
 const cardData = [
   { title: "Saldo a pagar", value: "R$ 120,55" },
@@ -13,8 +11,13 @@ const cardData = [
 
 const Home = () => (
   <Container>
-    <TableNavBar />
-    <RightSide></RightSide>
+    <Chart />
+    <RightSide>
+      {cardData.map((card) => (
+        <Card key={card.title} title={card.title} value={card.value} />
+      ))}
+      <button>Download</button>
+    </RightSide>
   </Container>
 );
 

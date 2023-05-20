@@ -9,4 +9,6 @@ export const darkTheme = {
     black3: "#1E1E1E",
     white: "#FFF",
   },
+  spacing: {},
+  sizes: {},
 };
