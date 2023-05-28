@@ -47,3 +47,17 @@ export const Content = styled.div`
     padding: 0;
   }
 `;
+
+export const ErrorMessage = styled.div`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  span {
+    color: red;
+    font-size: 12px;
+  }
+`;
