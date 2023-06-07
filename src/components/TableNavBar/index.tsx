@@ -8,8 +8,8 @@ const TableNavBar = () => (
       <DateInput title="Data inicial"></DateInput>
       <DateInput title="Data final"></DateInput>
       <SearchBar />
-      <button>Adicionar</button>
     </LeftSide>
+    <button>Adicionar</button>
   </Container>
 );
 

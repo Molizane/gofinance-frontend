@@ -50,7 +50,8 @@ const Signup = () => {
       }
 
       const passwordIsValid =
-        (newUserPassword == "" || newUserPassword == "") &&
+        newUserPassword == "" ||
+        newUserPassword == "" ||
         newUserPassword === newUserConfirmPassword;
 
       if (!passwordIsValid) {
@@ -79,7 +80,13 @@ const Signup = () => {
     } catch (err) {
       setHasError(true);
       const errors: string[] = [...errorMessages];
-      errors.push(err.message);
+      let message = "Unknown Error";
+
+      if (err instanceof Error) {
+        message = err.message;
+      }
+
+      errors.push(message);
       setErrorMessages(errors);
       console.log(err);
     } finally {
